@@ -183,6 +183,41 @@
 
 
 // //Assignment # 38-44 task no.3
+// function deleteRow(r) {
+//     var i = r.parentNode.parentNode.rowIndex;
+//     document.getElementById("myTable").deleteRow(i);
+//     reindex();
+// }
+
+// function reindex() {
+//   const ids = document.querySelectorAll("tr > td:nth-child(1)");
+//   ids.forEach( (e, i) => { e.innerText=(i+1) } );
+// }
+
+// function addRow() {
+//     var name = document.getElementById("name").value;
+//     var classVariable = document.getElementById("class").value;
+//     var table = document.getElementsByTagName("table")[0];
+    
+//     // delete button
+//     var button = document.createElement("button");
+//     button.innerHTML = "Delete";
+//     button.setAttribute("onclick", "deleteRow(this)");
+    
+//     var newRow = table.insertRow(-1);
+//     var cell1 = newRow.insertCell(0);
+//     var cell2 = newRow.insertCell(1);
+//     var cell3 = newRow.insertCell(2);
+//     var cell4 = newRow.insertCell(3);
+//     cell1.innerHTML = "";
+//     cell2.innerHTML = name;
+//     cell3.innerHTML = classVariable;
+//     cell4.appendChild( button );
+    
+//      reindex();
+// }
+
+
 
 // //Assignment # 43-48 task no.5
 // var i = 0;
