@@ -11,8 +11,8 @@
 <body>
 
     <!-- Assignment # 43-48 task no.2 -->
-    <!-- <h4 style="color: cadetblue;">Mobile Phone lookup</h4> -->
-    <!-- <img src="https://www.whatmobile.com.pk/admin/images/Samsung/SamsungGalaxyS20Ultra-b.jpg"
+    <h4 style="color: cadetblue;">Mobile Phone lookup</h4>
+    <img src="https://www.whatmobile.com.pk/admin/images/Samsung/SamsungGalaxyS20Ultra-b.jpg"
         alt="Samsung Galaxy S20 Ultra" width="100px" style="margin-left: 80px;">
     <img src="https://www.whatmobile.com.pk/admin/images/OnePlus/OnePlus7TPro-b.jpg" alt="OnePlus 7T Pro"  style="margin-left: 80px;" width="100px">
     <img src="https://www.whatmobile.com.pk/admin/images/Huawei/HuaweiMate20Pro-b.jpg" alt="Huawei Mate 20 Pro"  style="margin-left: 80px;"
@@ -24,98 +24,108 @@
     <a onclick="alert('Thankyou for purchasing a phone from us')" style="margin-left: 30px; color: cadetblue; cursor: pointer;">Samsung Galaxy S20 Ultra</a>
     <a onclick="alert('Thankyou for purchasing a phone from us')" style="margin-left: 50px; color: cadetblue; cursor: pointer;">OnePlus 7T Pro</a>
     <a onclick="alert('Thankyou for purchasing a phone from us')" style="margin-left: 70px; color: cadetblue; cursor: pointer;">Huawei Mate 20 Pro</a>
-    <a onclick="alert('Thankyou for purchasing a phone from us')" style="margin-left: 50px; color: cadetblue; cursor: pointer;">Huawei Y9 Prime 2019</a> -->
+    <a onclick="alert('Thankyou for purchasing a phone from us')" style="margin-left: 50px; color: cadetblue; cursor: pointer;">Huawei Y9 Prime 2019</a>
 
 
     <!-- Assignment # 43-48 task no.3 -->
-    <!-- <table id="myTable" border="1px">
-        <tr>
-            <th>Index</th>
-            <th>Name</th>
-            <th>Class</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Jhone</td>
-            <td>10</td>
-            <td><input type="button" value="Delete" id="btn" onclick="deleteRow(this)"></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Doe</td>
-            <td>9</td>
-            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Mark</td>
-            <td>10</td>
-            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>James</td>
-            <td>8</td>
-            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
-        </tr>
-    </table>
-<br>
-    Name : <input type="text" name="name" id="name">
-    Class : <input type="number" name="class" id="class">
-    <input type="button" value="Add" onclick="addRow()"> -->
+    <div id="wrapper">
+        <table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1>
+            <tr>
+                <th>Indexing</th>
+                <th>Name</th>
+                <th>Class</th>
+            </tr>
 
+            <tr id="row1">
+                <td>1</td>
+                <td id="name_row1">Jhone</td>
+                <td id="classV_row1">10</td>
+                <td>
+                    <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+                    <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+                    <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+                </td>
+            </tr>
+
+            <tr id="row2">
+                <td>2</td>
+                <td id="name_row2">Doe</td>
+                <td id="classV_row2">9</td>
+                <td>
+                    <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+                    <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+                    <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+                </td>
+            </tr>
+
+            <tr id="row3">
+                <td>3</td>
+                <td id="name_row3">Mark</td>
+                <td id="classV_row3">10</td>
+                <td>
+                    <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+                    <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+                    <input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+                </td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td><input type="text" id="new_name"></td>
+                <td><input type="text" id="new_classV"></td>
+                <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
+            </tr>
+
+        </table>
+    </div>
 
 
     <!-- Assignment # 43-48 task no.4 -->
-    <!-- <img src="images/others/1.jpg" width="200px" onmouseover ="src='images/others/2.jpg'" onmouseout="src='images/others/1.jpg'"> -->
+    <img src="images/others/1.jpg" width="200px" onmouseover ="src='images/others/2.jpg'" onmouseout="src='images/others/1.jpg'">
 
 
 
     <!-- Assignment # 43-48 task no.5 -->
-    <!-- <input type="text" id="counter" value="0"></input> <br><br>
+    <input type="text" id="counter" value="0"></input> <br><br>
     <button onclick="increment()">increase</button>
-    <button onclick="decrement()">decrease</button> -->
+    <button onclick="decrement()">decrease</button>
 
 
     <!--  Assignment # 49-52 task no.1 -->
-    <!-- <div style="text-align: center;">
+    <div style="text-align: center;">
         <h1>SignUp Form</h1>
         Full Name:<input type="text" id="fullName" style="margin: 10px;"><br>
         Email:<input type="email" id="email" style="margin: 10px;"><br>
         Contact No:<input type="number" id="number" style="margin: 10px;"><br>
         Qualification:<input type="text" id="qualification" style="margin: 10px;"><br>
         <input type="button" value="Submit Form" onclick="getData()">
-    </div> -->
+    </div>
 
     <!--  Assignment # 49-52 task no.2 -->
-    <!-- <p id="slowLoris">
+    <p id="slowLoris">
         Slow lorises are a group of several species of strepsirrhine primates which make up the genus Nycticebus.
         <a href="javascript:void(0);" onClick="expandLoris();"><em>Click for more.</em></a>
-    </p> -->
-
-
+    </p>
 
 
     <!--  Assignment # 53-58 task no.1 -->
-    <!-- <div id="modal" class="modal">
+    <div id="modal" class="modal">
         <span class="close" id="modal-close" onclick="onClosedImagModal()">&times;</span>
         <img class="modal-content" id="modal-img">
-    </div> -->
-
+    </div>
 
 
     <!--  Assignment # 53-58 task no.2 -->
-    <!-- <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti rem quaerat commodi voluptatem architecto.
+    <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti rem quaerat commodi voluptatem architecto.
         Doloremque enim adipisci eos ratione soluta odit praesentium accusantium quod molestias quisquam! Illum
         reprehenderit voluptate recusandae.</p>
 
     <button onclick="zoomIn()">Zoom In (+) </button>
-    <button onclick="zoomOut()">Zoom Out (-) </button> -->
-
+    <button onclick="zoomOut()">Zoom Out (-) </button>
 
 
     <!--  Assignment # 58-67 task no.1 -->
-    <!-- <div>
+    <div>
         <h1> DOM </h1>
         <div id="form-content" class="content"
         ><label for="first-name">First Name</label
@@ -132,7 +142,10 @@
         ><p class="render"> Country : Pakistan </p
         ><p class="render"> contact : +92 300 1234567</p
         ></div>
-    </div> -->
+    </div>
+
+
+    
     <script src="app.js"></script>
 </body>
 
