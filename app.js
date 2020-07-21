@@ -44,7 +44,7 @@ function mainFunction() {
     var marks1 = Number(prompt("Enter Marks for subject 1:"))
     var marks2 = Number(prompt("Enter Marks for subject 2:"))
     var marks3 = Number(prompt("Enter Marks for subject 3:"))
-    var total = marks1+marks2+marks3
+    var total = marks1 + marks2 + marks3
 
     var average = calculateAverage(total)
     var percentage = calculatePercentage(total)
@@ -52,11 +52,11 @@ function mainFunction() {
     alert("Average: " + average + "\nPercentage: " + percentage)
 }
 function calculateAverage(a) {
-    var keyA = a/3
+    var keyA = a / 3
     return keyA;
 }
 function calculatePercentage(a) {
-    var keyB = a/300 * 100
+    var keyB = a / 300 * 100
     return keyB;
 }
 mainFunction()
@@ -67,22 +67,22 @@ mainFunction()
 function findIndexOf() {
     var string = "Muneeba"
     var char = "n"
-for (var i = 0; i < string.length; i++) {
-    if (string[i] === char)
-        alert("String: "+string + "\n" + char + " is found at " + (i + 1))
+    for (var i = 0; i < string.length; i++) {
+        if (string[i] === char)
+            alert("String: " + string + "\n" + char + " is found at " + (i + 1))
     }
 }
 findIndexOf();
 
 
 //Assignment # 38-44 task no.6
-function checkVowels(string){
+function checkVowels(string) {
     string = string.toLowerCase();
-    var newtext = string.replace(/a/g,"")
-    newtext = newtext.replace(/e/g,"")
-    newtext = newtext.replace(/i/g,"")
-    newtext = newtext.replace(/o/g,"")
-    newtext = newtext.replace(/u/g,"")
+    var newtext = string.replace(/a/g, "")
+    newtext = newtext.replace(/e/g, "")
+    newtext = newtext.replace(/i/g, "")
+    newtext = newtext.replace(/o/g, "")
+    newtext = newtext.replace(/u/g, "")
     alert("Before: " + string + "\nAfter: " + newtext)
 }
 
@@ -118,7 +118,7 @@ function findOccurrences() {
         }
     }
 
-   alert("number of occurrences of any two vowels is: " + count)
+    alert("number of occurrences of any two vowels is: " + count)
 }
 
 findOccurrences();
@@ -148,13 +148,13 @@ centimeters(distance)
 //Assignment # 38-44 task no.9
 function overTimePay() {
     var workingHours = Number(prompt("Enter Working Hours: "))
-    if (workingHours > 40){
+    if (workingHours > 40) {
         var overTime = workingHours - 40;
         var pay = overTime * 12.00;
         alert("Over Time Pay is: " + pay)
     }
     else
-    alert("\nYou have to work for more than 40 hours to get over time pay")
+        alert("\nYou have to work for more than 40 hours to get over time pay")
 }
 overTimePay()
 
@@ -162,15 +162,15 @@ overTimePay()
 
 //Assignment # 38-44 task no.10
 var amount = parseInt(prompt("Please input amount for withdraw :"))
-function currencyNotes(){
-    var hundred =  amount / 100;
+function currencyNotes() {
+    var hundred = amount / 100;
     var fifty = (amount % 100) / 50;
     Math.trunc(fifty)
     var ten = ((amount % 100) % 50) / 10;
     Math.trunc(ten)
     var ones = ((amount % 100) % 50) % 10;
     Math.trunc(ones)
-    alert("Rs. 100 notes: " +  Math.trunc(hundred) + "\nRs. 50 notes: " +  Math.trunc(fifty) + "\nRs. 10 notes: " +  Math.trunc(ten) + "\nStill remaining: " +  Math.trunc(ones))
+    alert("Rs. 100 notes: " + Math.trunc(hundred) + "\nRs. 50 notes: " + Math.trunc(fifty) + "\nRs. 10 notes: " + Math.trunc(ten) + "\nStill remaining: " + Math.trunc(ones))
 }
 currencyNotes()
 
@@ -184,51 +184,51 @@ if (window.confirm('If you click "ok" you would be redirected . Cancel will load
 
 //Assignment # 38-44 task no.3
 function edit_row(no) {
-  document.getElementById("edit_button" + no).style.display = "none";
-  document.getElementById("save_button" + no).style.display = "block";
+    document.getElementById("edit_button" + no).style.display = "none";
+    document.getElementById("save_button" + no).style.display = "block";
 
-  var name = document.getElementById("name_row" + no);
-  var classV = document.getElementById("classV_row" + no);
+    var name = document.getElementById("name_row" + no);
+    var classV = document.getElementById("classV_row" + no);
 
-  var name_data = name.innerHTML;
-  var classV_data = classV.innerHTML;
+    var name_data = name.innerHTML;
+    var classV_data = classV.innerHTML;
 
-  name.innerHTML = "<input type='text' id='name_text" + no + "' value='" + name_data + "'>";
-  classV.innerHTML = "<input type='text' id='classV_text" + no + "' value='" + classV_data + "'>";
+    name.innerHTML = "<input type='text' id='name_text" + no + "' value='" + name_data + "'>";
+    classV.innerHTML = "<input type='text' id='classV_text" + no + "' value='" + classV_data + "'>";
 
 }
 
 function save_row(no) {
-  var name_val = document.getElementById("name_text" + no).value;
-  var classV_val = document.getElementById("classV_text" + no).value;
+    var name_val = document.getElementById("name_text" + no).value;
+    var classV_val = document.getElementById("classV_text" + no).value;
 
-  document.getElementById("name_row" + no).innerHTML = name_val;
-  document.getElementById("classV_row" + no).innerHTML = classV_val;
+    document.getElementById("name_row" + no).innerHTML = name_val;
+    document.getElementById("classV_row" + no).innerHTML = classV_val;
 
-  document.getElementById("edit_button" + no).style.display = "block";
-  document.getElementById("save_button" + no).style.display = "none";
+    document.getElementById("edit_button" + no).style.display = "block";
+    document.getElementById("save_button" + no).style.display = "none";
 }
 
 function delete_row(no) {
-  document.getElementById("row" + no + "").outerHTML = "";
-  reindex()
+    document.getElementById("row" + no + "").outerHTML = "";
+    reindex()
 }
 function add_row() {
-  var new_name = document.getElementById("new_name").value;
-  var new_classV = document.getElementById("new_classV").value;
+    var new_name = document.getElementById("new_name").value;
+    var new_classV = document.getElementById("new_classV").value;
 
-  var table = document.getElementById("data_table");
-  var table_len = (table.rows.length) - 1;
-  var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td> </td><td id='name_row" + table_len + "'>" + new_name + "</td><td id='classV_row" + table_len + "'>" + new_classV + "</td><td><input type='button' id='edit_button" + table_len + "' value='Edit' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len + "' value='Save' class='save' onclick='save_row(" + table_len + ")'> <input type='button' value='Delete' class='delete' onclick='delete_row(" + table_len + ")'></td></tr>";
+    var table = document.getElementById("data_table");
+    var table_len = (table.rows.length) - 1;
+    var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td> </td><td id='name_row" + table_len + "'>" + new_name + "</td><td id='classV_row" + table_len + "'>" + new_classV + "</td><td><input type='button' id='edit_button" + table_len + "' value='Edit' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len + "' value='Save' class='save' onclick='save_row(" + table_len + ")'> <input type='button' value='Delete' class='delete' onclick='delete_row(" + table_len + ")'></td></tr>";
 
-  document.getElementById("new_name").value = "";
-  document.getElementById("new_classV").value = "";
-  reindex();
+    document.getElementById("new_name").value = "";
+    document.getElementById("new_classV").value = "";
+    reindex();
 }
 
 function reindex() {
-  const ids = document.querySelectorAll("tr > td:nth-child(1)");
-  ids.forEach((e, i) => { e.innerText = (i + 1) });
+    const ids = document.querySelectorAll("tr > td:nth-child(1)");
+    ids.forEach((e, i) => { e.innerText = (i + 1) });
 }
 
 
@@ -243,7 +243,7 @@ function decrement() {
 
 
 
-Assignment # 49-52 task no.1
+//Assignment # 49-52 task no.1
 function getData() {
     document.clear();
     var fullName = document.getElementById("fullName").value;
@@ -255,7 +255,7 @@ function getData() {
 }
 
 
-Assignment # 49-52 task no.2
+//Assignment # 49-52 task no.2
 function expandLoris() {
     var expandedParagraph = "Slow lorises are a group of several species of trepsirrhine primates which make up the genus Nycticebus. They have a round head, narrow snout, large eyes, and a variety of distinctive coloration patterns that are species-dependent. The hands and feet of slow lorises have several adaptations that give them a pincer-like grip and enable them to grasp branches for long periods of time. Slow lorises have a toxic bite, a rare trait among mammals.";
     document.getElementById("slowLoris").innerHTML = expandedParagraph;
@@ -265,15 +265,11 @@ function expandLoris() {
 
 
 // Assignment # 53-58 task no.1
-var images = ["<img src='images/others/1.jpg'>" , "<img src='images/others/2.jpg'>" , "<img src='images/others/3.jpg'>" , "<img src='images/others/4.png'>"]
-
-for(var i =0; i<images.length; i++){
-    document.write(images[i])
-}
-
-function onClosedImagModal(){
-    var modal = document.getElementById('modal');
-     modal.classList.add('modal-open')
+function showImg(e) {
+    var imageAddress = e.src;
+    console.log(imageAddress);
+    var modalImage = document.getElementById('modal_inner_image');
+    modalImage.src = imageAddress;
 }
 
 
@@ -297,18 +293,18 @@ smaller.addEventListener("click", zoomOut);
 
 
 
-Assignment # 58-67 task no.1
+//Assignment # 58-67 task no.1
 var mainContent = document.getElementById("main-content").innerHTML;
 document.write(mainContent)
 
 var render = document.getElementsByClassName("render")
-for(var i=0; i<5; i++) {
+for (var i = 0; i < 5; i++) {
     document.write(render[i].innerHTML + "<br>")
 }
 
-document.getElementById('first-name').value='Muneeba' ; 
-document.getElementById('last-name').value='Younus' ; 
-document.getElementById('email').value='muneeba.younus2001@gmail.com' ; 
+document.getElementById('first-name').value = 'Muneeba';
+document.getElementById('last-name').value = 'Younus';
+document.getElementById('email').value = 'muneeba.younus2001@gmail.com';
 
 
 // Assignment # 58-67 task no.2
@@ -319,28 +315,29 @@ var nodeTypeVariable2 = document.getElementById("lastName");
 document.write(nodeTypeVariable2.nodeType + "<br>")
 for (var i = 0; i < nodeTypeVariable2.childNodes.length; i++) {
     document.write(nodeTypeVariable2.childNodes[i].nodeType)
-// }
+    // }
 
-var c = document.getElementById("lastName").childNodes.innerHTML = "Muhammad Younus";
-document.write("<br>Updated value: " + c)
-
-
-var firstChildVariable = document.getElementById("main-content").firstChild.innerHTML;
-document.write("<br>First Child: " + firstChildVariable)
-var lastChildVariable = document.getElementById("main-content").lastChild.innerHTML;
-document.write("<br>Last Child: " + lastChildVariable)
+    var c = document.getElementById("lastName").childNodes.innerHTML = "Muhammad Younus";
+    document.write("<br>Updated value: " + c)
 
 
-var nextSiblingVariable = document.getElementById("lastName").nextSibling.innerHTML;
-document.write("<br>Next Sibling: " + nextSiblingVariable)
+    var firstChildVariable = document.getElementById("main-content").firstChild.innerHTML;
+    document.write("<br>First Child: " + firstChildVariable)
+    var lastChildVariable = document.getElementById("main-content").lastChild.innerHTML;
+    document.write("<br>Last Child: " + lastChildVariable)
 
 
-var previousSiblingVariable = document.getElementById("lastName").previousSibling.innerHTML;
-document.write("<br>Previous Sibling: " + previousSiblingVariable)
+    var nextSiblingVariable = document.getElementById("lastName").nextSibling.innerHTML;
+    document.write("<br>Next Sibling: " + nextSiblingVariable)
 
 
-var nodeNameVariable = document.getElementById("email").parentNode.nodeName;
-document.write(nodeNameVariable);
+    var previousSiblingVariable = document.getElementById("lastName").previousSibling.innerHTML;
+    document.write("<br>Previous Sibling: " + previousSiblingVariable)
 
-var nodeTypeVariable3 = document.getElementById("email").nodeType;
-document.write("<br>" + nodeTypeVariable3);
+
+    var nodeNameVariable = document.getElementById("email").parentNode.nodeName;
+    document.write(nodeNameVariable);
+
+    var nodeTypeVariable3 = document.getElementById("email").nodeType;
+    document.write("<br>" + nodeTypeVariable3);
+}
